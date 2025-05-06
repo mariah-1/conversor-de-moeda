@@ -7,7 +7,7 @@ import org.json.JSONObject;
 
 public class ApiService {
 
-    private final String API_KEY = "60fdb4823fc3e5c273ed6c1d";
+    private final String API_KEY = System.getenv("EXCHANGE_API_KEY");
 
     public double getTaxaCambio(String origem, String destino) throws IOException, InterruptedException {
         String url = "https://v6.exchangerate-api.com/v6/" + API_KEY + "/latest/" + origem;
